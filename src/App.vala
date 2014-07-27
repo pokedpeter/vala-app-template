@@ -5,7 +5,7 @@ public class App : Granite.Application {
     View.AppWindow _app_win;
 
 	construct {
-        program_name = "Project";
+        program_name = "App";
     }
 
     public override void activate() {
