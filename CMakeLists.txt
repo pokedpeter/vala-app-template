@@ -34,7 +34,7 @@ pkg_check_modules (DEPS REQUIRED ${PROJECT_DEPS})
 
 # Check GTK+ 3 version is at least 3.4
 
-pkg_check_modules (GTK+ REQUIRED "gtk+-3.0 >= 3.4")
+pkg_check_modules (GTK+ REQUIRED "gtk+-3.0 >= 3.14")
 
 # Other stuff
 
