@@ -18,19 +18,25 @@ namespace Template.View {
 
 public class AppWindow : Gtk.Window {
 
-	public AppWindow (Granite.Application app) {
+    Gtk.HeaderBar bar;
 
+	public AppWindow (Granite.Application app) {
+		// Window specific stuff
         set_application (app);
-		set_title (app.program_name);
         set_default_size (500, 300);
         window_position = Gtk.WindowPosition.CENTER;
 
-        setup ();
+		// Set up other GUI elements
+        setup (app);
 	}
 
-	public void setup () {
+	public void setup (Granite.Application app) {
+		// Header bar
+	    this.bar = new Gtk.HeaderBar ();
+	    bar.set_show_close_button (true);
+	    bar.set_title (app.program_name);
+		this.set_titlebar (this.bar);
 	}
-
 }
 
 }
